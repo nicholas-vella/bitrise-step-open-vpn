@@ -29,9 +29,9 @@ description: |
 
   * [Cisco VPN connect](https://www.bitrise.io/integrations/steps/vpnc-connect)
 
-website: https://github.com/bitrise-steplib/bitrise-step-open-vpn
-source_code_url: https://github.com/bitrise-steplib/bitrise-step-open-vpn
-support_url: https://github.com/bitrise-steplib/bitrise-step-open-vpn/issues
+website: https://github.com/nicholas-vella/bitrise-step-open-vpn
+source_code_url: https://github.com/nicholas-vella/bitrise-step-open-vpn
+support_url: https://github.com/nicholas-vella/bitrise-step-open-vpn/issues
 
 type_tags:
   - access-control
@@ -96,6 +96,20 @@ inputs:
     opts:
       title: "Base64 encoded Client Private Key"
       summary: "Base64 encoded Client Private Key"
+      is_expand: true
+      is_required: true
+      is_sensitive: true
+  - user: "$VPN_USERNAME"
+    opts:
+      title: "The Username to provide as credentials to the VPN"
+      summary: "The Username to provide as credentials to the VPN"
+      is_expand: true
+      is_required: true
+      is_sensitive: true
+  - password: "$VPN_PASSWORD"
+    opts:
+      title: "The Password to provide as credentials to the VPN"
+      summary: "The Password to provide as credentials to the VPN"
       is_expand: true
       is_required: true
       is_sensitive: true
